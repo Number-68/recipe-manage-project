@@ -55,3 +55,9 @@ npm
 ensure your postgre is running and you have the right connections
 
 todo next is build more of th eapplication. lookingg at drizzle thing next.
+
+
+
+### set up .env 
+
+database variable = databasse connection port, password, username, etc.
