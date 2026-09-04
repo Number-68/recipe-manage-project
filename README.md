@@ -40,10 +40,18 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 
 # sections to add 
-ddependencies 
+## initial setup
+
+### base javascript version
+npm 
+
+### git repo environment
 
 
-- postgresql 
+### dependencies 
+
+- postgresql (installation details: https://www.postgresql.org/download/)
 
 ensure your postgre is running and you have the right connections
 
+todo next is build more of th eapplication. lookingg at drizzle thing next.
