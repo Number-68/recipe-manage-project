@@ -57,8 +57,7 @@ export const ingredientsTable = pgTable("ingredients", {
   ingredient: varchar({ length:255 }).notNull(),
   description: text().notNull(),
 
-}
-)
+})
 
 
 
