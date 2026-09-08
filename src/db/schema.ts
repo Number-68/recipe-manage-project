@@ -11,13 +11,7 @@ export const usersTable = pgTable("users", {
 });
 
 
-export const directionsTable = pgTable("directions", {
-    id: integer().primaryKey().generatedAlwaysAsIdentity(),
-    recipe_id: integer().notNull().references(() => recipesTable.id),
-    recipe_step: integer().notNull(),
-    step_title: varchar().notNull(),
-    description: text().notNull(),
-})
+
 
 
 export const recipesTable = pgTable("recipes", {
@@ -27,6 +21,33 @@ export const recipesTable = pgTable("recipes", {
 
 
 })
+
+export const directionsTable = pgTable("directions", {
+    id: integer().primaryKey().generatedAlwaysAsIdentity(),
+    recipe_id: integer().notNull().references(() => recipesTable.id),
+    recipe_step: integer().notNull(),
+    step_title: varchar().notNull(),
+    description: text().notNull(),
+})
+
+
+
+export const categoriesTable = pgTable("categories", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  category_name: varchar().notNull(),
+})
+
+
+
+
+
+export const recipeCategories = pgTable("recipeCatergories", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  recipe_id: integer().notNull().references(() => recipesTable.id).unique(),
+  category_id: integer().notNull().references(() => categoriesTable.id).unique(),
+
+})
+
 
 
 
